@@ -1,6 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Navigation from '../../components/Navigation';
+import Navigation from '../../components/navigation/Navigation';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,11 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className='border border-red-600'>
+      <body className={inter.className + ' min-h-screen flex flex-col'}>
+        <header className=''>
           <Navigation />
         </header>
-        <main className='border border-blue-600'>
+        <main className='border border-rose-500 flex-grow flex justify-center items-center'>
           {children}
         </main>
       </body>
